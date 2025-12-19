@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -10,19 +10,12 @@
 </head>
 <body class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 flex flex-col min-h-screen transition-colors duration-300">
 
-<!-- Navbar -->
 <nav class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
             <a href="../" class="font-display font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-blue-400 transition">Robin Cerisier</a>
              
              <div class="flex items-center space-x-4">
-                 <!-- Dark Mode Toggle -->
-                <button class="theme-toggle p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition focus:outline-none">
-                    <svg class="w-6 h-6 hidden dark:block" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                    <svg class="w-6 h-6 block dark:hidden" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-                </button>
-
                 <a href="../" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition flex items-center">
                     <svg class="w-4 h-4 mr-1" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
                     Retour
@@ -43,7 +36,6 @@
     </header>
 
     <div class="space-y-12">
-        <!-- Section: Contexte -->
         <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
             <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6">Contexte et Objectifs</h2>
             <div class="prose prose-lg text-gray-600 dark:text-gray-300 max-w-none">
@@ -57,7 +49,6 @@
             </div>
         </section>
 
-        <!-- Section: Analyse -->
         <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
             <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-8">Implémentation Technique</h2>
             
@@ -93,7 +84,6 @@
             </div>
         </section>
 
-        <!-- Section: Preuves -->
         <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
             <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-8">Aperçu du Résultat</h2>
             <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl relative group cursor-pointer transition-colors">
@@ -102,7 +92,6 @@
             <p class="text-center text-sm text-gray-400 mt-4">Vue du plateau de jeu lors d'une partie active</p>
         </section>
 
-        <!-- Section: Architecture UML -->
         <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
             <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-8">Architecture IHM (UML)</h2>
             <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl relative group cursor-pointer transition-colors">
@@ -112,7 +101,6 @@
         </section>
     </div>
 
-    <!-- Navigation Footer -->
     <div class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-between">
         <a href="../pokemon-tcg/" class="text-brand-primary dark:text-blue-400 font-bold hover:underline">&larr; Projet Précédent : Pokemon TCG (Moteur)</a>
         <a href="../demos/" class="text-brand-primary dark:text-blue-400 font-bold hover:underline">Projet Suivant : Demos &rarr;</a>
