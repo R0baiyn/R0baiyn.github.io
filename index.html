@@ -99,9 +99,6 @@
                     <a href="#realisations" class="px-8 py-3.5 rounded-xl bg-brand-primary text-white font-bold hover:bg-blue-600 transition shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 w-full sm:w-auto">
                         Voir mes projets
                     </a>
-                    <a href="#contact" class="px-8 py-3.5 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-bold hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition w-full sm:w-auto">
-                        Me contacter
-                    </a>
                 </div>
             </div>
         </div>
@@ -173,9 +170,9 @@
         </div>
 
         <div class="text-center mt-16">
-            <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition duration-300 shadow-sm">
+            <a href="./cv/cv.pdf" class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition duration-300 shadow-sm">
                 <svg class="h-5 w-5 mr-3 text-gray-400" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                Télécharger mon CV
+                Accéder à mon CV
             </a>
         </div>
     </div>
@@ -188,6 +185,27 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Projet 1 -->
+            <!-- Projet 1: Controverse (S1) -->
+            <a href="./controverse/" class="group block h-full">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
+                    <div class="h-56 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                         <span class="text-white font-display font-bold text-2xl opacity-50 mix-blend-overlay">Controverse</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <span class="text-xs font-bold text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/30 px-3 py-1 rounded-full uppercase tracking-wide">Projet S1</span>
+                        </div>
+                        <h5 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-amber-500 dark:group-hover:text-amber-500 transition">Site de Controverse</h5>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">Site web vitrine présentant une controverse. Développement 100% HTML/CSS responsive et sans framework.</p>
+                        <div class="flex items-center text-amber-500 font-semibold">
+                            Découvrir le projet
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Projet 2: Pokemon TCG Moteur (S2) -->
             <a href="./pokemon-tcg/" class="group block h-full">
                 <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
                     <div class="h-56 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
@@ -195,7 +213,7 @@
                     </div>
                     <div class="p-8 flex flex-col flex-grow">
                         <div class="mb-4">
-                            <span class="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full uppercase tracking-wide">Projet S2 - Phase 1</span>
+                            <span class="text-xs font-bold text-brand-primary dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full uppercase tracking-wide">Projet S2 - Phase 1</span>
                         </div>
                         <h5 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-primary dark:group-hover:text-blue-400 transition">Pokemon TCG (Moteur)</h5>
                         <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">Développement du cœur du jeu en Java : mécaniques, règles et tests unitaires.</p>
@@ -207,7 +225,7 @@
                 </div>
             </a>
 
-             <!-- Projet 1b -->
+            <!-- Projet 3: Pokemon TCG IHM (S2) -->
             <a href="./pokemon-tcg-ihm/" class="group block h-full">
                 <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
                     <div class="h-56 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
@@ -227,7 +245,7 @@
                 </div>
             </a>
 
-            <!-- Projet 2 -->
+            <!-- Projet 4: Demos (S3) -->
             <a href="./demos/" class="group block h-full">
                 <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
                     <div class="h-56 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
@@ -246,26 +264,6 @@
                     </div>
                 </div>
             </a>
-
-            <!-- Projet 3 -->
-            <a href="./nuit-info/" class="group block h-full">
-                <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
-                    <div class="h-56 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                         <span class="text-white font-display font-bold text-2xl opacity-50 mix-blend-overlay">Nuit de l'Info</span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="mb-4">
-                            <span class="text-xs font-bold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full uppercase tracking-wide">Hackathon</span>
-                        </div>
-                        <h5 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-primary dark:group-hover:text-blue-400 transition">Nuit de l'Info</h5>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">Développement web intensif de 24h sur le thème de l'accessibilité numérique.</p>
-                        <div class="flex items-center text-brand-primary dark:text-blue-400 font-semibold">
-                            Découvrir le projet
-                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
         </div>
     </div>
 </section>
@@ -274,14 +272,14 @@
 <section id="contact" class="py-24 bg-gray-900 dark:bg-gray-950 text-white relative overflow-hidden transition-colors duration-300">
     <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20"></div>
     <div class="max-w-3xl mx-auto px-4 text-center sm:px-6 lg:px-8 relative z-10">
-        <h2 class="font-display text-3xl font-bold mb-8">On travaille ensemble ?</h2>
+        <h2 class="font-display text-3xl font-bold mb-8">Me contacter</h2>
         <p class="text-xl text-gray-300 mb-12">
             Je suis toujours à la recherche de nouveaux défis et d'opportunités d'apprentissage. N'hésitez pas à me contacter pour discuter de vos projets.
         </p>
         
         <div class="flex flex-col md:flex-row justify-center gap-6">
-            <a href="mailto:robin.cerisier@etu.umontpellier.fr" class="px-8 py-4 bg-brand-primary hover:bg-blue-600 text-white font-bold rounded-xl transition shadow-lg hover:shadow-blue-500/20 transform hover:-translate-y-1">
-                robin.cerisier@etu.umontpellier.fr
+            <a href="mailto:robin.cerisier@gmail.com" class="px-8 py-4 bg-brand-primary hover:bg-blue-600 text-white font-bold rounded-xl transition shadow-lg hover:shadow-blue-500/20 transform hover:-translate-y-1">
+                robin.cerisier@gmail.com
             </a>
             <a href="https://linkedin.com/in/robin-cerisier" target="_blank" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl transition border border-gray-700 hover:border-gray-600 transform hover:-translate-y-1">
                 Profil LinkedIn
