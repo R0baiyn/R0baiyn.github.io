@@ -112,7 +112,7 @@
                     Passionné par la conception d'applications robustes et scalables, je n'envisage pas le développement comme une simple succession de lignes de code. Au contraire, je m'engage dans une démarche tant pratique que réflexive : je cherche à comprendre les enjeux architecturaux sous-jacents, à maîtriser les principes de qualité logicielle et à anticiper les défis que rencontreront les systèmes en production.
                 </p>
                 <p>
-                    Cette philosophie guide mon travail au quotidien, qu'il s'agisse de participer à des projets académiques ou d'explorer des concepts en autodidacte. Je m'intéresse particulièrement aux patterns d'architecture, aux bonnes pratiques de sécurité et à la performance des systèmes, des domaines essentiels pour concevoir des solutions durables et maintenables.
+                    Cette philosophie guide mon travail au quotidien, surtout quand il s'agit de participer à des projets académiques. Je m'intéresse particulièrement aux patterns d'architecture, aux bonnes pratiques de sécurité et à la performance des systèmes, des domaines essentiels pour concevoir des solutions durables et maintenables.
                 </p>
             </div>
 
