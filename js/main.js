@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
     const lightbox = document.createElement('div');
     lightbox.id = 'lightbox';
     lightbox.className = 'fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300';
@@ -58,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     closeBtn.addEventListener('click', closeLightbox);
-    
+
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             closeLightbox();
@@ -73,15 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lightboxImg.addEventListener('click', (e) => {
         e.stopPropagation();
-        
+
         if (!isZoomed) {
             const rect = lightboxImg.getBoundingClientRect();
             const x = ((e.clientX - rect.left) / rect.width) * 100;
             const y = ((e.clientY - rect.top) / rect.height) * 100;
-            
+
             lightboxImg.style.transformOrigin = `${x}% ${y}%`;
             lightboxImg.style.transform = 'scale(2.5)';
-            
+
             lightboxImg.classList.remove('cursor-zoom-in');
             lightboxImg.classList.add('cursor-zoom-out');
             isZoomed = true;

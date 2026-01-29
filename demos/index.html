@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Demos - Robin Cerisier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <script src="../js/tailwind-config.js"></script>
+</head>
+
+<body
+        class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 flex flex-col min-h-screen transition-colors duration-300">
+
+<nav
+        class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <a href="../"
+               class="font-display font-bold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition">Robin
+                Cerisier</a>
+
+            <div class="flex items-center space-x-4">
+                <a href="../"
+                   class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition flex items-center">
+                    <svg class="w-4 h-4 mr-1" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    Retour
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
+
+    <header class="text-center mb-16">
+        <div
+                class="inline-block px-4 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 text-sm font-bold tracking-wide uppercase mb-4">
+            Projet S3
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Demos</h1>
+        <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+            Plateforme de démocratie participative fullstack. Gestion AGILE (SCRUM) et architecture MVC rigoureuse.
+        </p>
+        <div class="mt-8 flex justify-center">
+            <a href="https://webinfo.iutmontp.univ-montp2.fr/~cerisierr/demos/web/controleurFrontal.php"
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition">
+                Voir le site
+            </a>
+        </div>
+    </header>
+
+    <div class="space-y-12">
+        <section
+                class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
+            <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6">Contexte et Méthodologie
+            </h2>
+            <div class="prose prose-lg text-gray-600 dark:text-gray-300 max-w-none">
+                <p>
+                    Réalisé en équipe de 4, ce projet consiste en le développement complet (fullstack) d'un site web
+                    de démocratie participative. Nous avons adopté une <strong>méthode Agile SCRUM</strong>
+                    rigoureuse, avec des sprints de 3 semaines se concluant systématiquement par un rendez-vous
+                    client pour faire le point.
+                </p>
+                <div
+                        class="my-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border-l-4 border-indigo-600 dark:border-indigo-400">
+                    <p class="font-semibold text-gray-900 dark:text-white m-0">Communication Client & Product Owner
+                    </p>
+                    <p class="m-0 text-sm mt-1">La communication avec le client durant les sprints passait
+                        exclusivement par notre Product Owner, garantissant un flux d'information clair et
+                        centralisé entre l'équipe de développement et les besoins métier.</p>
+                </div>
+            </div>
+        </section>
+
+        <section
+                class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
+            <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-8">Architecture Technique
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-3">Architecture MVC & SOLID</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Implémentation stricte du modèle <strong>MVC (Modèle-Vue-Contrôleur)</strong> pour séparer
+                        la logique, les données et l'affichage. Le code respecte les principes
+                        <strong>SOLID</strong> pour assurer maintenabilité et évolutivité.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-3">Fonctionnalités Clés</h3>
+                    <ul
+                            class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed list-disc list-inside space-y-1">
+                        <li>Architecture MVC complète</li>
+                        <li>Principes SOLID respectés</li>
+                        <li>Gestion de projet SCRUM</li>
+                        <li>Communication via Product Owner</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-between">
+        <a href="../pokemon-tcg-ihm/" class="text-indigo-600 dark:text-indigo-400 font-bold hover:underline">&larr;
+            Projet Précédent : Pokemon TCG (Interface)</a>
+        <span class="text-gray-400 dark:text-gray-600 cursor-not-allowed">Fin des projets</span>
+    </div>
+
+</div>
+
+<footer class="py-8 text-center text-gray-400 dark:text-gray-500 text-sm">
+    &copy; <span id="current-year"></span> Robin Cerisier
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+
+</html>

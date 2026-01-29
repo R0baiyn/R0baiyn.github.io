@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Portfolio - Robin Cerisier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet">
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body
+        class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+
+<nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex items-center">
+                <a href="#"
+                   class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent hover:opacity-80 transition">
+                    Robin Cerisier
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#presentation"
+                   class="font-medium text-gray-600 dark:text-gray-300 hover:text-brand-primary dark:hover:text-blue-400 transition relative group">
+                    Présentation
+                    <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary dark:bg-blue-400 transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#parcours"
+                   class="font-medium text-gray-600 dark:text-gray-300 hover:text-brand-primary dark:hover:text-blue-400 transition relative group">
+                    Parcours
+                    <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary dark:bg-blue-400 transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#realisations"
+                   class="font-medium text-gray-600 dark:text-gray-300 hover:text-brand-primary dark:hover:text-blue-400 transition relative group">
+                    Réalisations
+                    <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary dark:bg-blue-400 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="#contact"
+                   class="px-5 py-2.5 rounded-full bg-gray-900 dark:bg-blue-600 text-white font-medium hover:bg-gray-800 dark:hover:bg-blue-700 transition transform hover:-translate-y-0.5 shadow-lg shadow-gray-900/20 dark:shadow-blue-900/40">
+                    Contact
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center space-x-4">
+                <button id="mobile-menu-btn"
+                        class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu"
+         class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 absolute w-full shadow-xl">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+            <a href="#presentation"
+               class="block px-3 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-brand-primary dark:hover:text-blue-400">Présentation</a>
+            <a href="#parcours"
+               class="block px-3 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-brand-primary dark:hover:text-blue-400">Parcours</a>
+            <a href="#realisations"
+               class="block px-3 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-brand-primary dark:hover:text-blue-400">Réalisations</a>
+            <a href="#contact"
+               class="block px-3 py-3 rounded-lg text-base font-medium text-brand-primary dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<header
+        class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="absolute inset-0 hero-pattern z-0"></div>
+    <div
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 dark:bg-blue-900 blur-3xl opacity-50 dark:opacity-20 animate-pulse">
+    </div>
+    <div
+            class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-indigo-100 dark:bg-indigo-900 blur-3xl opacity-50 dark:opacity-20">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col items-center gap-12 text-center">
+            <div class="w-full max-w-4xl space-y-6">
+                <div
+                        class="inline-flex items-center px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/30 text-brand-primary dark:text-blue-400 text-sm font-semibold mb-4">
+                        <span
+                                class="flex h-2 w-2 rounded-full bg-green-500 dark:bg-green-400 mr-2 animate-pulse"></span>
+                    Disponible pour un stage ou une alternance.
+                </div>
+                <h1
+                        class="font-display text-5xl lg:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                    Bonjour ! Je suis <br>
+                    <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Robin
+                            Cerisier</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Étudiant en <span class="font-semibold text-gray-900 dark:text-gray-200">BUT
+                            Informatique</span>, je conçois des applications modernes et performantes.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#realisations"
+                       class="px-8 py-3.5 rounded-xl bg-brand-primary text-white font-bold hover:bg-blue-600 transition shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 w-full sm:w-auto">
+                        Voir mes projets
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="presentation" class="py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-3xl font-bold text-center text-gray-900 dark:text-white mb-6">À Propos de Moi
+        </h2>
+        <div class="flex flex-wrap justify-center gap-3 mb-6">
+                <span
+                        class="px-4 py-2 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-semibold border border-gray-100 dark:border-gray-700 hover:border-brand-primary dark:hover:border-blue-400 hover:text-brand-primary dark:hover:text-blue-400 transition-colors duration-300 cursor-default">Rigueur</span>
+            <span
+                    class="px-4 py-2 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-semibold border border-gray-100 dark:border-gray-700 hover:border-brand-primary dark:hover:border-blue-400 hover:text-brand-primary dark:hover:text-blue-400 transition-colors duration-300 cursor-default">Curiosité</span>
+            <span
+                    class="px-4 py-2 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-semibold border border-gray-100 dark:border-gray-700 hover:border-brand-primary dark:hover:border-blue-400 hover:text-brand-primary dark:hover:text-blue-400 transition-colors duration-300 cursor-default">Travail
+                    d'équipe</span>
+            <span
+                    class="px-4 py-2 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-semibold border border-gray-100 dark:border-gray-700 hover:border-brand-primary dark:hover:border-blue-400 hover:text-brand-primary dark:hover:text-blue-400 transition-colors duration-300 cursor-default">Adaptabilité</span>
+        </div>
+
+        <div class="space-y-6 text-lg text-gray-600 dark:text-gray-300 text-justify leading-relaxed">
+            <p>
+                Je suis actuellement en deuxième année du BUT Informatique à l'IUT de Montpellier, spécialisé dans
+                le parcours RACDV (Réalisation d'Application : Conception, Développement, Validation). Cette
+                formation me permet de développer une vision globale du développement logiciel, au-delà de la simple
+                programmation.
+            </p>
+
+            <div class="space-y-4">
+                <h3
+                        class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent inline-block">
+                    Une Approche Réfléchie du Développement
+                </h3>
+
+                <p>
+                    Passionné par la conception d'applications robustes et scalables, je n'envisage pas le
+                    développement comme une simple succession de lignes de code. Au contraire, je m'engage dans une
+                    démarche tant pratique que réflexive : je cherche à comprendre les enjeux architecturaux
+                    sous-jacents, à maîtriser les principes de qualité logicielle et à anticiper les défis que
+                    rencontreront les systèmes en production.
+                </p>
+                <p>
+                    Cette philosophie guide mon travail au quotidien, surtout quand il s'agit de participer à des
+                    projets académiques. Je m'intéresse particulièrement aux patterns d'architecture, aux bonnes
+                    pratiques de sécurité et à la performance des systèmes, des domaines essentiels pour concevoir
+                    des solutions durables et maintenables.
+                </p>
+            </div>
+
+            <div class="space-y-4 pt-4">
+                <h3
+                        class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent inline-block">
+                    Vers une Nouvelle Étape
+                </h3>
+
+                <p>
+                    Après le BUT, je souhaite poursuivre mes études en intégrant un programme d'ingénieur
+                    généraliste en informatique. Cette prochaine étape me permettra d'approfondir mes connaissances
+                    et d'explorer plus largement les enjeux de l'ingénierie logicielle moderne.
+                </p>
+                <p>
+                    Bien que mes intérêts se cristallisent progressivement autour de l'architecture des systèmes
+                    logiciels, je reste ouvert à découvrir d'autres domaines et à laisser mon parcours d'études
+                    m'orienter vers les spécialités qui me passionneront vraiment. Je crois que cette phase de
+                    transition est le moment idéal pour affiner ma vision et identifier mes véritables priorités.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="parcours" class="py-24 bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">Mon Parcours
+        </h2>
+
+        <div class="relative space-y-12 pl-8 border-l-2 border-gray-200 dark:border-gray-800 ml-4 md:ml-0">
+            <div class="relative pl-8">
+                    <span
+                            class="absolute -left-[41px] top-1.5 h-5 w-5 rounded-full bg-white dark:bg-gray-900 border-4 border-brand-primary"></span>
+                <div
+                        class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-transparent dark:border-gray-800">
+                        <span
+                                class="text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-blue-400 mb-1 block">2024
+                            - Présent</span>
+                    <h5 class="font-display text-xl font-bold text-gray-900 dark:text-white mb-2">BUT Informatique
+                    </h5>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">IUT de Montpellier</p>
+                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Parcours RACDV. Apprentissage approfondi du cycle de vie du logiciel, des méthodes agiles
+                        (SCRUM), et des technologies web et logicielles modernes (Java, PHP, JS, Docker, Git).
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-8">
+                    <span
+                            class="absolute -left-[41px] top-1.5 h-5 w-5 rounded-full bg-white dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700"></span>
+                <div
+                        class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-transparent dark:border-gray-800">
+                        <span
+                                class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1 block">2024</span>
+                    <h5 class="font-display text-xl font-bold text-gray-900 dark:text-white mb-2">Baccalauréat
+                        Général</h5>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">Mention Assez Bien</p>
+                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Spécialités Mathématiques et NSI (Numérique et Sciences Informatiques). Option Mathématiques
+                        Expertes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-16">
+            <a href="./cv/cv.pdf"
+               class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition duration-300 shadow-sm">
+                <svg class="h-5 w-5 mr-3 text-gray-400" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                Accéder à mon CV
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="realisations" class="py-24 bg-white dark:bg-gray-900 relative transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">Mes Réalisations
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="./controverse/" class="group block h-full">
+                <div
+                        class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
+                    <div
+                            class="h-56 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                    class="text-white font-display font-bold text-2xl opacity-50 mix-blend-overlay">Controverse</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                                <span
+                                        class="text-xs font-bold text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/30 px-3 py-1 rounded-full uppercase tracking-wide">Projet
+                                    S1</span>
+                        </div>
+                        <h5
+                                class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-amber-500 dark:group-hover:text-amber-500 transition">
+                            Site de Controverse</h5>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">Site web vitrine
+                            présentant une controverse. Développement 100% HTML/CSS responsive et sans framework.
+                        </p>
+                        <div class="flex items-center text-amber-500 font-semibold">
+                            Découvrir le projet
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./pokemon-tcg/" class="group block h-full">
+                <div
+                        class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
+                    <div
+                            class="h-56 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                    class="text-white font-display font-bold text-2xl opacity-50 mix-blend-overlay">Pokemon
+                                TCG</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                                <span
+                                        class="text-xs font-bold text-brand-primary dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full uppercase tracking-wide">Projet
+                                    S2 - Phase 1</span>
+                        </div>
+                        <h5
+                                class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-primary dark:group-hover:text-blue-400 transition">
+                            Pokemon TCG (Moteur)</h5>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">Développement du
+                            cœur du jeu en Java : mécaniques, règles et tests unitaires.</p>
+                        <div class="flex items-center text-brand-primary dark:text-blue-400 font-semibold">
+                            Découvrir le projet
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./pokemon-tcg-ihm/" class="group block h-full">
+                <div
+                        class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
+                    <div
+                            class="h-56 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                    class="text-white font-display font-bold text-2xl opacity-50 mix-blend-overlay">Pokemon
+                                TCG UI</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                                <span
+                                        class="text-xs font-bold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-3 py-1 rounded-full uppercase tracking-wide">Projet
+                                    S2 - Phase 2</span>
+                        </div>
+                        <h5
+                                class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-primary dark:group-hover:text-blue-400 transition">
+                            Pokemon TCG (Interface)</h5>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">Conception d'une
+                            interface graphique riche en JavaFX (MVC, Animations, Events).</p>
+                        <div class="flex items-center text-brand-primary dark:text-blue-400 font-semibold">
+                            Découvrir le projet
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./demos/" class="group block h-full">
+                <div
+                        class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full border border-gray-100 dark:border-gray-700 flex flex-col">
+                    <div
+                            class="h-56 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                    class="text-white font-display font-bold text-2xl opacity-50 mix-blend-overlay">Demos</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                                <span
+                                        class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full uppercase tracking-wide">Projet
+                                    S3</span>
+                        </div>
+                        <h5
+                                class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-primary dark:group-hover:text-blue-400 transition">
+                            Demos</h5>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">Plateforme de
+                            démocratie participative fullstack. MVC, SOLID, AGILE (SCRUM) et focus UX/UI.</p>
+                        <div class="flex items-center text-brand-primary dark:text-blue-400 font-semibold">
+                            Découvrir le projet
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact"
+         class="py-24 bg-gray-900 dark:bg-gray-950 text-white relative overflow-hidden transition-colors duration-300">
+    <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20">
+    </div>
+    <div class="max-w-3xl mx-auto px-4 text-center sm:px-6 lg:px-8 relative z-10">
+        <h2 class="font-display text-3xl font-bold mb-8">Me contacter</h2>
+        <p class="text-xl text-gray-300 mb-12">
+            Je suis toujours à la recherche de nouveaux défis et d'opportunités d'apprentissage. N'hésitez pas à me
+            contacter pour discuter de vos projets.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            <a href="mailto:robin.cerisier@gmail.com"
+               class="px-8 py-4 bg-brand-primary hover:bg-blue-600 text-white font-bold rounded-xl transition shadow-lg hover:shadow-blue-500/20 transform hover:-translate-y-1">
+                robin.cerisier@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/robin-cerisier" target="_blank"
+               class="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl transition border border-gray-700 hover:border-gray-600 transform hover:-translate-y-1">
+                Profil LinkedIn
+            </a>
+            <a href="https://github.com/r0baiyn" target="_blank"
+               class="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl transition border border-gray-700 hover:border-gray-600 transform hover:-translate-y-1">
+                GitHub
+            </a>
+        </div>
+
+        <p class="mt-12 text-gray-500 text-sm">Montpellier, France</p>
+    </div>
+</section>
+
+<footer
+        class="py-10 bg-black dark:bg-gray-950 text-gray-600 dark:text-gray-500 text-center text-sm border-t border-gray-900 dark:border-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+        &copy; <span id="current-year"></span> Robin Cerisier
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>
