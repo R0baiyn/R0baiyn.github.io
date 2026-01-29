@@ -85,7 +85,7 @@
 </div>
 
 <footer class="py-8 text-center text-gray-400 dark:text-gray-500 text-sm">
-    &copy; 2025 Robin Cerisier
+    &copy; <?= (new dateTime())->format('Y') ?> Robin Cerisier
 </footer>
 
 <script src="../js/main.js"></script>

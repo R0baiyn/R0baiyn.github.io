@@ -281,7 +281,7 @@
 
 <footer class="py-10 bg-black dark:bg-gray-950 text-gray-600 dark:text-gray-500 text-center text-sm border-t border-gray-900 dark:border-gray-900">
     <div class="max-w-7xl mx-auto px-4">
-        &copy; 2025 Robin Cerisier. <span class="mx-2">|</span> Conçu avec passion.
+        &copy; <?= (new dateTime())->format('Y') ?> Robin Cerisier
     </div>
 </footer>
 
