@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Noodle — Audit & Refactoring | Robin Cerisier</title>
+    <meta name="description" content="Projet Noodle : audit complet, refactoring, sécurisation et optimisation d'une application PHP existante. Semestre 4 — BUT Informatique.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Barres d'implication */
+        .implication-dot {
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            border: 2px solid #d1d5db;
+            transition: background 0.2s;
+        }
+        .dark .implication-dot { background: #374151; border-color: #4b5563; }
+        .implication-dot.filled { background: #6366f1; border-color: #4f46e5; }
+        
+        /* Badges compétences */
+        .badge-c1 { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+        .dark .badge-c1 { background: rgba(30,64,175,0.3); color: #93c5fd; border-color: rgba(30,64,175,0.5); }
+        .badge-c2 { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+        .dark .badge-c2 { background: rgba(6,95,70,0.3); color: #6ee7b7; border-color: rgba(6,95,70,0.5); }
+        .badge-c3 { background: #ede9fe; color: #5b21b6; border: 1px solid #ddd6fe; }
+        .dark .badge-c3 { background: rgba(91,33,182,0.3); color: #c4b5fd; border-color: rgba(91,33,182,0.5); }
+        .badge-c4 { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .dark .badge-c4 { background: rgba(146,64,14,0.3); color: #fcd34d; border-color: rgba(146,64,14,0.5); }
+        .badge-c5 { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+        .dark .badge-c5 { background: rgba(55,48,163,0.3); color: #a5b4fc; border-color: rgba(55,48,163,0.5); }
+        .badge-c6 { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+        .dark .badge-c6 { background: rgba(157,23,77,0.3); color: #f9a8d4; border-color: rgba(157,23,77,0.5); }
+    </style>
+</head>
+
+<body class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+
+<!-- Navigation -->
+<nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <a href="../index.html" class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent hover:opacity-80 transition flex items-center gap-2">
+                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Portfolio
+            </a>
+            <div class="flex items-center gap-6">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="relative pt-32 pb-16 lg:pt-44 overflow-hidden bg-white dark:bg-gray-900">
+    <div class="absolute inset-0 hero-pattern z-0 opacity-50"></div>
+    <div class="absolute top-10 right-0 w-72 h-72 rounded-full bg-violet-100 dark:bg-violet-900/20 blur-3xl opacity-40"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex items-start gap-6 mb-8">
+            <div class="text-5xl">🍜</div>
+            <div>
+                <div class="flex flex-wrap gap-3 mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-violet-100 text-violet-800 dark:bg-violet-900/50 dark:text-violet-300 border border-violet-200 dark:border-violet-800">Semestre 4 — 2026</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-700">~3 mois</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300 border border-red-200 dark:border-red-800">Audit · Refactoring · Sécurité</span>
+                </div>
+                <h1 class="font-display text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                    Noodle — <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-500">Audit & Refactoring</span>
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
+                    Analyse, audit et refactoring complet d'une application PHP existante présentant de nombreuses failles de sécurité et un code source de mauvaise qualité.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+
+    <!-- Contexte -->
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <span class="text-xl">📋</span> Contexte
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+            Projet d'analyse, d'audit et de refactoring complet d'une application existante (<em>Noodle</em>) présentant un code source de mauvaise qualité et une base de données mal conçue. L'objectif était d'identifier tous les problèmes (sécurité, performance, architecture, qualité de code) puis de proposer et implémenter des solutions pour rendre l'application sûre, maintenable et optimisée.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">📅 Dates</div>
+                <div class="font-medium text-gray-900 dark:text-white">2026 (Semestre 4)</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">⏱️ Durée</div>
+                <div class="font-medium text-gray-900 dark:text-white">~3 mois</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700 sm:col-span-2">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">🎯 Objectifs</div>
+                <div class="font-medium text-gray-900 dark:text-white text-sm">Auditer une application existante, identifier les failles de sécurité, corriger l'architecture et optimiser la base de données</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">⚠️ Contraintes</div>
+                <div class="font-medium text-gray-900 dark:text-white text-sm">Code legacy sans documentation, BD non normalisée, respect OWASP</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Démarche & Implication -->
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <span class="text-xl">🚀</span> Démarche & Implication
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Analyse approfondie du code source et de la base de données. Rédaction d'un rapport d'audit complet. Implémentation des corrections : refactoring du code avec application des principes SOLID, normalisation de la base de données (3FN), correction des failles de sécurité (injections SQL, XSS, CSRF). Travail méthodique d'analyse puis de correction en groupe de trois.
+        </p>
+    </section>
+
+    <!-- Technologies -->
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <span class="text-xl">🛠️</span> Technologies &amp; Outils
+        </h2>
+        <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">PHP</span>
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">MySQL</span>
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">PHPStan</span>
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">PHP-CS-Fixer</span>
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">PHPUnit</span>
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">Git / Gitlab</span>
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">Audit</span>
+            <span class="px-4 py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-800 dark:text-violet-300 rounded-xl text-sm font-bold border border-violet-200 dark:border-violet-800">Refactoring</span>
+        </div>
+    </section>
+
+    <!-- Navigation inter-projets -->
+    <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center pt-4 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <a href="../demos/" class="flex items-center gap-2 text-brand-primary dark:text-blue-400 font-bold hover:underline">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            Demos — Vote en ligne
+        </a>
+        <span class="text-gray-400 dark:text-gray-600 text-sm italic">Dernier projet</span>
+    </nav>
+</main>
+
+<footer class="py-10 mt-8 bg-black dark:bg-gray-950 text-gray-600 dark:text-gray-500 text-center text-sm border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+        &copy; <span id="current-year"></span> Robin Cerisier
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

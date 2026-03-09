@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Portfolio d'Apprentissage - Robin Cerisier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .badge { @apply px-2 py-1 text-xs font-bold rounded; }
+        .ac-badge { @apply bg-blue-100 text-blue-800 border border-blue-200 dark:bg-blue-900/40 dark:text-blue-300 dark:border-blue-800; }
+        .ce-badge { @apply bg-cyan-100 text-cyan-800 border border-cyan-200 dark:bg-cyan-900/40 dark:text-cyan-300 dark:border-cyan-800; }
+    </style>
+</head>
+
+<body class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+
+<nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent hover:opacity-80 transition flex items-center gap-2">
+                    <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Retour
+                </a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#competences" class="font-medium text-gray-600 dark:text-gray-300 hover:text-brand-primary dark:hover:text-blue-400 transition relative group">
+                    Compétences
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary dark:bg-blue-400 transition-all group-hover:w-full"></span>
+                </a>
+                <a href="../index.html#contact" class="px-5 py-2.5 rounded-full bg-gray-900 dark:bg-blue-600 text-white font-medium hover:bg-gray-800 dark:hover:bg-blue-700 transition transform hover:-translate-y-0.5 shadow-lg shadow-gray-900/20 dark:shadow-blue-900/40">
+                    Contact
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center space-x-4">
+                <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 absolute w-full shadow-xl">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+            <a href="#competences" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-brand-primary dark:hover:text-blue-400">Compétences</a>
+            <a href="../index.html#contact" class="block px-3 py-3 rounded-lg text-base font-medium text-brand-primary dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="absolute inset-0 hero-pattern z-0"></div>
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 dark:bg-blue-900 blur-3xl opacity-50 dark:opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-indigo-100 dark:bg-indigo-900 blur-3xl opacity-50 dark:opacity-20"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col items-center gap-12 text-center">
+            <div class="w-full max-w-4xl space-y-6">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/30 text-brand-primary dark:text-blue-400 text-sm font-semibold mb-4">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-primary dark:bg-blue-400 mr-2"></span>
+                    BUT Informatique - Parcours RACDV
+                </div>
+                <h1 class="font-display text-5xl lg:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                    Portfolio <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">d'Apprentissage</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Bilan de mes apprentissages en BUT2 Informatique. Ce portfolio détaille l'acquisition des <span class="font-semibold text-gray-900 dark:text-gray-200">6 compétences</span> en les associant directement aux Apprentissages Critiques (AC) et Composantes Essentielles (CE) du niveau 2 via des preuves concrètes.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="competences" class="py-24 bg-gray-50 dark:bg-gray-950 transition-colors duration-300 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        
+        <!-- Compétence 1 -->
+        <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-blue-200 dark:hover:border-blue-900/50">
+            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-brand-primary dark:text-blue-400 border border-blue-200 dark:border-blue-800/50">
+                    <span class="font-display font-bold text-3xl">C1</span>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white">Réaliser</h2>
+                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 border border-blue-200 dark:border-blue-800">Niveau 2</span>
+                    </div>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 font-medium">Développer des applications informatiques simples.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../demos/" class="hover:text-blue-500 transition-colors inline-flex items-center gap-1">Projet Demos (Vote en ligne) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC21.01</span> <span class="badge ac-badge">AC21.03</span></div>
+                            <strong>Implémentation depuis des spécifications</strong> : L'architecture MVC du site de vote a été codée à partir du cahier des charges, avec séparation de la logique et de l'affichage (Bonnes pratiques de conception).
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC21.04</span></div>
+                            <strong>Validation par tests</strong> : Utilisation de PHPUnit pour s'assurer de l'intégrité des modèles et des différents contrôleurs pour les utilisateurs et sondages.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Code sécurisé et soigné</strong> : Mise en œuvre de protections XSS / CSRF par des tokens tout en fournissant un code documenté via PHPDoc.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../controverse/" class="hover:text-blue-500 transition-colors inline-flex items-center gap-1">Site de Controverse <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC21.02</span></div>
+                            <strong>Ergonomie et Accessibilité</strong> : Conception d'un site multi-pages avec une structure HTML5 sémantique rigoureuse (<code>header</code>, <code>nav</code>, <code>article</code>, <code>footer</code>) pour optimiser le référencement et la lisibilité par les lecteurs d'écran.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Interface responsive sans framework</strong> : Mise en page CSS3 pur (Flexbox, Media Queries) pour un rendu cohérent sur desktop, tablette et mobile, sans recourir à aucune librairie externe.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Compétence 2 -->
+        <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-emerald-200 dark:hover:border-emerald-900/50">
+            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/50">
+                    <span class="font-display font-bold text-3xl">C2</span>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white">Optimiser</h2>
+                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">Niveau 2 (Terminé)</span>
+                    </div>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 font-medium">Optimiser des applications informatiques (Performances, Sécurité, Qualité).</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../noodle/" class="hover:text-emerald-500 transition-colors inline-flex items-center gap-1">Projet Noodle (Audit & Refactoring) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC22.03</span></div>
+                            <strong>Comprendre la sécurisation du code</strong> : Analyse systématique et identification des failles de sécurité (Injections SQL, XSS). Rédaction d'un audit complet sur les faiblesses initiales.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Identification des limites</strong> : Utilisation avancée d'outils automatisés, linters et analyseurs statiques pour évaluer avec rigueur la sécurité de l'application et proposer un refactoring adapté.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../pokemon-tcg/" class="hover:text-emerald-500 transition-colors inline-flex items-center gap-1">Projet Pokemon TCG <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC22.01</span> <span class="badge ac-badge">AC22.02</span></div>
+                            <strong>Structures de données & Algorithmique</strong> : Architecture complexe utilisant l'héritage et le polymorphisme en Java. Gestion de la main et de la pioche par des LIFO/Piles adaptées.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Justification de pertinence</strong> : Modélisation formelle du calcul des dégâts (prise en compte types, faiblesses, résistances) prouvant l'efficacité de la logique mathématique métier avec couverture de tests totale.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 3 -->
+        <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-purple-200 dark:hover:border-purple-900/50">
+            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800/50">
+                    <span class="font-display font-bold text-3xl">C3</span>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white">Administrer</h2>
+                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-300 border border-purple-200 dark:border-purple-800">Niveau 2</span>
+                    </div>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 font-medium">Administrer des systèmes informatiques communicants complexes.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../demos/" class="hover:text-purple-500 transition-colors inline-flex items-center gap-1">Sécurité Web (Projet Demos) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC23.01</span> <span class="badge ac-badge">AC23.03</span></div>
+                            <strong>Comprendre les systèmes communicants</strong> : Implémentation d'un système robuste d'authentification basé sur des sessions PHP.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Contrôler l'accès au réseau</strong> : Limitation rigoureuse des accès aux panneaux de contrôle (rôles admin/votant) via des middlewares personnalisés empêchant les actions illégitimes.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        Droit et architecture IUT
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC23.02</span> <span class="badge ac-badge">AC23.04</span></div>
+                            <strong>Gérer des services d'application</strong> : Mes projets de développement Web ont tous été implémentés et testés selon le modèle client-serveur sur les serveurs institutionnels (Apache Web) garantissant un déploiement fonctionnel sur une infrastructure distante.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 4 -->
+        <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-amber-200 dark:hover:border-amber-900/50">
+            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800/50">
+                    <span class="font-display font-bold text-3xl">C4</span>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white">Gérer</h2>
+                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Niveau 2 (Terminé)</span>
+                    </div>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 font-medium">Gérer des données de l'information avec intégrité et sécurité.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../noodle/" class="hover:text-amber-500 transition-colors inline-flex items-center gap-1">Projet Noodle <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC24.01</span></div>
+                            <strong>Optimiser un modèle BD</strong> : Analyse de la base de données défaillante. Refonte complète des tables vers un Modèle Relationnel validant les 3 Formes Normales pour éviter l'anomalie de duplication.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Justifier la structure</strong> : Documentation exhaustive du schéma dans le rapport d'audit pour prouver les bienfaits de l'optimisation.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../demos/" class="hover:text-amber-500 transition-colors inline-flex items-center gap-1">Projet Demos <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC24.02</span> <span class="badge ac-badge">AC24.03</span></div>
+                            <strong>Confidentialité & Programmation robuste</strong> : Utilisation de PDO avec requêtes préparées systématiques, couplée au hachage `bcrypt` des mots de passe. RGPD pris en compte.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Sécuriser les transactions</strong> : Mise à disposition de vues de statistiques avec un fort couplage MySQL pour la restitution dynamique des votes sans divulguer de données personnelles.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 5 -->
+        <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-indigo-200 dark:hover:border-indigo-900/50">
+            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/50">
+                    <span class="font-display font-bold text-3xl">C5</span>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white">Conduire</h2>
+                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">Niveau 2 (Terminé)</span>
+                    </div>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 font-medium">Conduire des projets informatiques structurés, avec un suivi rigoureux.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../demos/" class="hover:text-indigo-500 transition-colors inline-flex items-center gap-1">Gestion Agile (Demos) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC25.02</span> <span class="badge ac-badge">AC25.04</span></div>
+                            <strong>Outils PM & Démarche SCRUM</strong> : Suivi complet de projet sur GitLab à l'aide d'issues (Tickets). Adoption fluide d'une démarche itérative Scrum menant aux livrables.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Respect des délais</strong> : Validation des livrables selon des contraintes temps strictes, impliquant de constantes adaptations de la planification.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../noodle/" class="hover:text-indigo-500 transition-colors inline-flex items-center gap-1">Organisation analytique (Noodle) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC25.01</span> <span class="badge ac-badge">AC25.03</span></div>
+                            <strong>Démarche de diagnostic & Légal</strong> : Priorisation des correctifs d'une base dysfonctionnelle sur la portée de l'obligation de confidentialité. 
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Formalisation des résultats</strong> : Rédaction d'un rapport structurant les résultats des contrôles du projet, et guidant le maître d'ouvrage sur la faisabilité.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 6 -->
+        <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-pink-200 dark:hover:border-pink-900/50">
+            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 dark:text-pink-400 border border-pink-200 dark:border-pink-800/50">
+                    <span class="font-display font-bold text-3xl">C6</span>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white">Collaborer</h2>
+                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-pink-100 text-pink-800 dark:bg-pink-900/50 dark:text-pink-300 border border-pink-200 dark:border-pink-800">Niveau 2</span>
+                    </div>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 font-medium">Travailler dans une équipe informatique de manière réactive et collaborative.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../pokemon-tcg/" class="hover:text-pink-500 transition-colors inline-flex items-center gap-1">Projet Pokemon TCG (Binôme) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC26.04</span></div>
+                            <strong>Travail collectif</strong> : Conduite du projet sur semestre complet en binôme. Pratique poussée du *Pair programming* pour résoudre l'intégration des règles métier lors du passage dans l'Interface.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Pratiques inclusives & Intégration</strong> : Résolution de merge conflits et adaptation de la vitesse de rédaction pour faciliter la communication.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <a href="../demos/" class="hover:text-pink-500 transition-colors inline-flex items-center gap-1">Projets de Groupe (Demos) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ac-badge">AC26.03</span></div>
+                            <strong>Communication professionnelle</strong> : Mise en œuvre avec l'équipe de comptes-rendus réguliers via la rédaction de notes d'avancement pour coordonner le back-end et front-end.
+                        </li>
+                        <li>
+                            <div class="flex flex-wrap gap-2 mb-1"><span class="badge ce-badge">CE</span></div>
+                            <strong>Répartition du travail</strong> : Respect des affinités de chaque membre du groupe de 4, et synchronisation grâce à la communication asynchrone (chat) et synchrone (mini-réunions scrum).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="py-10 mt-12 bg-black dark:bg-gray-950 text-gray-600 dark:text-gray-500 text-center text-sm border-t border-gray-900 dark:border-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+        &copy; <span id="current-year"></span> Robin Cerisier
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+
+</html>

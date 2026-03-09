@@ -1,124 +1,116 @@
 <!doctype html>
 <html lang="fr" class="scroll-smooth dark">
-
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Site de Controverse - Robin Cerisier</title>
+    <title>Site de Controverse — HTML/CSS | Robin Cerisier</title>
+    <meta name="description" content="Projet Site de Controverse : création d'un site vitrine complet en HTML5/CSS3 sans framework. Semestre 1 — BUT Informatique.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
-            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .implication-dot{width:14px;height:14px;border-radius:50%;background:#e5e7eb;border:2px solid #d1d5db;transition:background .2s;}
+        .dark .implication-dot{background:#374151;border-color:#4b5563;}
+        .implication-dot.filled{background:#6366f1;border-color:#4f46e5;}
+    </style>
 </head>
+<body class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
 
-<body
-        class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 flex flex-col min-h-screen transition-colors duration-300">
-
-<nav
-        class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-            <a href="../"
-               class="font-display font-bold text-gray-900 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition">Robin
-                Cerisier</a>
-
-            <div class="flex items-center space-x-4">
-                <a href="../"
-                   class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition flex items-center">
-                    <svg class="w-4 h-4 mr-1" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-                    </svg>
-                    Retour
-                </a>
+<nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <a href="../index.html" class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent hover:opacity-80 transition flex items-center gap-2">
+                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Portfolio
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="https://webinfo.iutmontp.univ-montp2.fr/~cerisierr/sae_1.06" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-orange-500 text-white text-sm font-bold hover:bg-orange-600 transition">Voir le site ↗</a>
             </div>
         </div>
     </div>
 </nav>
 
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
-
-    <header class="text-center mb-16">
-        <div
-                class="inline-block px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-sm font-bold tracking-wide uppercase mb-4">
-            Projet S1
-        </div>
-        <h1 class="font-display text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Site de
-            Controverse</h1>
-        <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            Découverte du développement web : création d'un site vitrine complet sans framework.
-        </p>
-        <div class="mt-8 flex justify-center">
-            <a href="https://webinfo.iutmontp.univ-montp2.fr/~cerisierr/sae_1.06" target="_blank"
-               rel="noopener noreferrer"
-               class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition">
-                Voir le site
-            </a>
-        </div>
-    </header>
-
-    <div class="space-y-12">
-        <section
-                class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
-            <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6">Contexte et Objectifs
-            </h2>
-            <div class="prose prose-lg text-gray-600 dark:text-gray-300 max-w-none">
-                <p>
-                    Réalisé en équipe de 4 lors du premier semestre (S1), ce projet avait pour but de présenter une
-                    controverse actuelle sous la forme d'un site web attractif et informatif. La contrainte
-                    technique majeure était l'interdiction de tout framework CSS (type Bootstrap) pour garantir une
-                    maîtrise fondamentale du langage.
+<header class="relative pt-32 pb-16 lg:pt-44 overflow-hidden bg-white dark:bg-gray-900">
+    <div class="absolute inset-0 hero-pattern z-0 opacity-50"></div>
+    <div class="absolute top-10 right-0 w-72 h-72 rounded-full bg-orange-100 dark:bg-orange-900/20 blur-3xl opacity-40"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex items-start gap-6 mb-8">
+            <div class="text-5xl">🌐</div>
+            <div>
+                <div class="flex flex-wrap gap-3 mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 border border-orange-200 dark:border-orange-800">Semestre 1 — 2024/2025</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-700">~2 mois</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-200 dark:border-amber-800">HTML · CSS · Responsive</span>
+                </div>
+                <h1 class="font-display text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                    Site de Controverse — <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">HTML/CSS pur</span>
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
+                    Création d'un site vitrine informatif présentant une controverse actuelle, sans aucun framework — uniquement HTML5 sémantique et CSS3 responsive.
                 </p>
-                <div
-                        class="my-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 dark:border-orange-400">
-                    <p class="font-semibold text-gray-900 dark:text-white m-0">Apprentissage Fondamental</p>
-                    <p class="m-0 text-sm mt-1">Conception responsive "à la main" via Flexbox et Media Queries,
-                        respect strict des standards W3C et de l'accessibilité de base.</p>
-                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</header>
 
-        <section
-                class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
-            <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-8">Détails Techniques</h2>
+<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-3">HTML5 & Sémantique</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-                        Structure de page rigoureuse utilisant les balises sémantiques (<code>header</code>,
-                        <code>nav</code>, <code>article</code>, <code>footer</code>) pour optimiser le référencement
-                        et l'accessibilité.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-3">CSS3 & Responsive</h3>
-                    <ul
-                            class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed list-disc list-inside space-y-1">
-                        <li>Mise en page via <strong>Flexbox</strong></li>
-                        <li>Design réactif (Desktop / Tablette / Mobile)</li>
-                        <li>Code CSS modulaire et propre</li>
-                        <li>Charte graphique cohérente</li>
-                    </ul>
-                </div>
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3"><span>📋</span> Contexte</h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+            Réalisé en équipe de 4 lors du premier semestre, ce projet avait pour but de présenter une controverse actuelle sous la forme d'un site web attractif et informatif. La contrainte technique majeure était l'interdiction de tout framework CSS (Bootstrap, Tailwind…) pour garantir une maîtrise fondamentale du langage et des standards.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">📅 Dates</div>
+                <div class="font-medium text-gray-900 dark:text-white">2024 - 2025 (Semestre 1)</div>
             </div>
-        </section>
-    </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">⏱️ Durée</div>
+                <div class="font-medium text-gray-900 dark:text-white">~2 mois</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700 sm:col-span-2">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">🎯 Objectifs</div>
+                <div class="font-medium text-gray-900 dark:text-white text-sm">Concevoir un site multi-pages informatif, responsive et accessible, sans framework</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">⚠️ Contraintes</div>
+                <div class="font-medium text-gray-900 dark:text-white text-sm">Interdit d'utiliser tout framework CSS, respect W3C, accessibilité de base</div>
+            </div>
+        </div>
+    </section>
 
-    <div class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-between">
-        <span class="text-gray-400 dark:text-gray-600 cursor-not-allowed">Début des projets</span>
-        <a href="../pokemon-tcg/" class="text-indigo-600 dark:text-indigo-400 font-bold hover:underline">Projet
-            Suivant : Pokemon TCG (Moteur) &rarr;</a>
-    </div>
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3"><span>🚀</span> Démarche</h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Conception responsive "à la main" via Flexbox et Media Queries. Mise en place d'une structure HTML5 sémantique rigoureuse pour optimiser le référencement et l'accessibilité de base. Charte graphique définie collectivement et appliquée de façon cohérente sur toutes les pages.
+        </p>
+    </section>
 
-</div>
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3"><span>🛠️</span> Technologies</h2>
+        <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-800 dark:text-orange-300 rounded-xl text-sm font-bold border border-orange-200 dark:border-orange-800">HTML5</span>
+            <span class="px-4 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-800 dark:text-orange-300 rounded-xl text-sm font-bold border border-orange-200 dark:border-orange-800">CSS3</span>
+            <span class="px-4 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-800 dark:text-orange-300 rounded-xl text-sm font-bold border border-orange-200 dark:border-orange-800">Flexbox</span>
+            <span class="px-4 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-800 dark:text-orange-300 rounded-xl text-sm font-bold border border-orange-200 dark:border-orange-800">Media Queries</span>
+            <span class="px-4 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-800 dark:text-orange-300 rounded-xl text-sm font-bold border border-orange-200 dark:border-orange-800">Sémantique W3C</span>
+        </div>
+    </section>
 
-<footer class="py-8 text-center text-gray-400 dark:text-gray-500 text-sm">
-    &copy; <span id="current-year"></span> Robin Cerisier
+    <nav class="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-800">
+        <span class="text-gray-400 dark:text-gray-600 text-sm italic">Premier projet</span>
+        <a href="../pokemon-tcg/" class="flex items-center gap-2 text-brand-primary dark:text-blue-400 font-bold hover:underline">
+            Pokémon TCG — Jeu de Cartes
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+    </nav>
+</main>
+
+<footer class="py-10 mt-8 bg-black dark:bg-gray-950 text-gray-600 dark:text-gray-500 text-center text-sm border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4">&copy; <span id="current-year"></span> Robin Cerisier</div>
 </footer>
-
 <script src="../js/main.js"></script>
 </body>
-
 </html>

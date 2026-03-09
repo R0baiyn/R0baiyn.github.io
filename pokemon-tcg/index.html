@@ -1,181 +1,131 @@
 <!doctype html>
 <html lang="fr" class="scroll-smooth dark">
-
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Pokemon TCG - Robin Cerisier</title>
+    <title>Pokémon TCG — Jeu de Cartes | Robin Cerisier</title>
+    <meta name="description" content="Projet Pokemon TCG : développement d'un jeu de cartes Pokémon complet en Java (moteur + interface JavaFX). Semestre 2 — BUT Informatique.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
-            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .implication-dot{width:14px;height:14px;border-radius:50%;background:#e5e7eb;border:2px solid #d1d5db;transition:background .2s;}
+        .dark .implication-dot{background:#374151;border-color:#4b5563;}
+        .implication-dot.filled{background:#6366f1;border-color:#4f46e5;}
+    </style>
 </head>
+<body class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
 
-<body
-        class="font-sans text-gray-700 dark:text-gray-300 antialiased bg-gray-50 dark:bg-gray-950 flex flex-col min-h-screen transition-colors duration-300">
-
-
-<nav
-        class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-            <a href="../"
-               class="font-display font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-blue-400 transition">Robin
-                Cerisier</a>
-
-            <div class="flex items-center space-x-4">
-
-
-                <a href="../"
-                   class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition flex items-center">
-                    <svg class="w-4 h-4 mr-1" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-                    </svg>
-                    Retour
-                </a>
-            </div>
+<nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <a href="../index.html" class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent hover:opacity-80 transition flex items-center gap-2">
+                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Portfolio
+            </a>
         </div>
     </div>
 </nav>
 
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
-
-    <header class="text-center mb-16">
-        <div
-                class="inline-block px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm font-bold tracking-wide uppercase mb-4">
-            Projet S2 - Phase 1
-        </div>
-        <h1 class="font-display text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Pokemon TCG
-            (Moteur)</h1>
-        <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            Développement du cœur fonctionnel du jeu de cartes Pokémon en Java. Implémentation des mécaniques, des
-            règles et de l'intelligence artificielle.
-        </p>
-    </header>
-
-    <div class="space-y-12">
-
-        <section
-                class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
-            <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6">Contexte et Objectifs
-            </h2>
-            <div class="prose prose-lg text-gray-600 dark:text-gray-300 max-w-none">
-                <p>
-                    Première phase du projet, réalisée en trinôme. L'objectif était de développer l'intégralité de
-                    la logique du jeu (backend) et de l'interfacer avec une interface graphique fournie par les
-                    enseignants, en se concentrant sur la modélisation objet, les tests unitaires et le respect des
-                    règles officielles du TCG Pokémon.
+<header class="relative pt-32 pb-16 lg:pt-44 overflow-hidden bg-white dark:bg-gray-900">
+    <div class="absolute inset-0 hero-pattern z-0 opacity-50"></div>
+    <div class="absolute top-10 right-0 w-72 h-72 rounded-full bg-yellow-100 dark:bg-yellow-900/20 blur-3xl opacity-40"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex items-start gap-6 mb-8">
+            <div class="text-5xl">🎮</div>
+            <div>
+                <div class="flex flex-wrap gap-3 mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300 border border-yellow-200 dark:border-yellow-800">Semestre 2 — 2025</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-700">~3 mois</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800">Java · JavaFX · POO</span>
+                </div>
+                <h1 class="font-display text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                    Pokémon TCG — <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500">Jeu de Cartes</span>
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
+                    Développement complet d'un jeu de cartes Pokémon en Java : moteur de jeu (règles, types, dégâts) et interface graphique JavaFX réactive.
                 </p>
-                <div
-                        class="my-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border-l-4 border-brand-primary dark:border-blue-500">
-                    <p class="font-semibold text-gray-900 dark:text-white m-0">Programmation Orientée Objet</p>
-                    <p class="m-0 text-sm mt-1">Application des principes SOLID, utilisation intensive de l'héritage
-                        et du polymorphisme pour gérer les différents types de cartes et d'effets.</p>
-                </div>
             </div>
-        </section>
-
-
-        <section
-                class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
-            <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-8">Implémentation Technique
-            </h2>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-3 flex items-center">
-                            <span
-                                    class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900 text-brand-primary dark:text-blue-300 flex items-center justify-center mr-3">1</span>
-                        Modélisation (UML)
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-                        Conception précise du diagramme de classes avant codage. Gestion des relations entre
-                        Dresseurs, Pokémon, Énergies et Attaques.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-3 flex items-center">
-                            <span
-                                    class="w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 flex items-center justify-center mr-3">2</span>
-                        Tests & Qualité
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-                        Écriture de tests unitaires (JUnit) pour valider chaque mécanique (calcul des dégâts,
-                        application des statuts, conditions de victoire).
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800">
-                <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-4">Points Forts</h3>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600 dark:text-gray-400">
-                    <li class="flex items-center">
-                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                             stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Code propre et documenté (JavaDoc)
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                             stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Gestion complexe des règles du jeu
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                             stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Tests unitaires robustes
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                             stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Architecture prête pour l'IHM
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-
-        <section
-                class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors">
-            <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-8">Aperçu du Code
-                (Diagramme)</h2>
-            <div
-                    class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl relative group cursor-pointer transition-colors">
-                <img src="../img/ptcgUML.png" alt="Diagramme de classes UML du moteur de jeu"
-                     class="w-full h-auto object-cover transform hover:scale-[1.02] transition duration-500">
-            </div>
-            <p class="text-center text-sm text-gray-400 mt-4">Architecture des classes du moteur de jeu</p>
-        </section>
+        </div>
     </div>
+</header>
 
+<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
 
-    <div class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-between">
-        <a href="../controverse/" class="text-brand-primary dark:text-blue-400 font-bold hover:underline">&larr;
-            Projet Précédent : Site de Controverse</a>
-        <a href="../pokemon-tcg-ihm/" class="text-brand-primary dark:text-blue-400 font-bold hover:underline">Projet
-            Suivant : Pokemon TCG (Interface) &rarr;</a>
-    </div>
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3"><span>📋</span> Contexte</h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+            Projet réalisé en trinôme (SAE S2.01 + S2.02). La première phase portait sur le moteur de jeu en Java (logique, règles, tests unitaires JUnit). La seconde phase consistait à intégrer une interface graphique JavaFX en respectant l'architecture MVC stricte fournie.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">📅 Dates</div>
+                <div class="font-medium text-gray-900 dark:text-white">2025 (Semestre 2)</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">⏱️ Durée</div>
+                <div class="font-medium text-gray-900 dark:text-white">~3 mois</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700 sm:col-span-2">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">🎯 Objectifs</div>
+                <div class="font-medium text-gray-900 dark:text-white text-sm">Implémenter un moteur de jeu respectant les règles Pokémon simplifiées avec une interface graphique interactive</div>
+            </div>
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">⚠️ Contraintes</div>
+                <div class="font-medium text-gray-900 dark:text-white text-sm">Java obligatoire, JavaFX pour IHM, POO avancée, intégration backend fourni</div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3"><span>🚀</span> Démarche &amp; Implication</h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Implémentation du moteur de jeu complet et d'une grande partie de l'interface graphique. Autonomie totale sur la conception de l'architecture objet (classes Pokémon, Énergie, Dresseur, Attaque). Travail approfondi sur le polymorphisme et l'héritage pour gérer les spécificités de chaque type de carte. Utilisation des Bindings JavaFX pour la réactivité de l'UI.
+        </p>
+    </section>
 
-<footer class="py-8 text-center text-gray-400 dark:text-gray-500 text-sm">
-    &copy; <span id="current-year"></span> Robin Cerisier
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3"><span>🖼️</span> Aperçu</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                <img src="../img/ptcgUML.png" alt="Diagramme UML du moteur de jeu" class="w-full h-auto object-cover hover:scale-[1.02] transition duration-500">
+                <p class="text-center text-xs text-gray-400 py-2">Architecture UML — Moteur de jeu</p>
+            </div>
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                <img src="../img/ptcgihmJeu.png" alt="Interface JavaFX du jeu Pokémon" class="w-full h-auto object-cover hover:scale-[1.02] transition duration-500">
+                <p class="text-center text-xs text-gray-400 py-2">Interface JavaFX — Vue du plateau de jeu</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3"><span>🛠️</span> Technologies</h2>
+        <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-300 rounded-xl text-sm font-bold border border-yellow-200 dark:border-yellow-800">Java</span>
+            <span class="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-300 rounded-xl text-sm font-bold border border-yellow-200 dark:border-yellow-800">JavaFX</span>
+            <span class="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-300 rounded-xl text-sm font-bold border border-yellow-200 dark:border-yellow-800">JUnit</span>
+            <span class="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-300 rounded-xl text-sm font-bold border border-yellow-200 dark:border-yellow-800">POO / Héritage</span>
+            <span class="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-300 rounded-xl text-sm font-bold border border-yellow-200 dark:border-yellow-800">MVC</span>
+            <span class="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-300 rounded-xl text-sm font-bold border border-yellow-200 dark:border-yellow-800">Git</span>
+        </div>
+    </section>
+
+    <nav class="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-800">
+        <a href="../controverse/" class="flex items-center gap-2 text-brand-primary dark:text-blue-400 font-bold hover:underline">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            Site de Controverse
+        </a>
+        <a href="../demos/" class="flex items-center gap-2 text-brand-primary dark:text-blue-400 font-bold hover:underline">
+            Demos — Vote en ligne
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+    </nav>
+</main>
+
+<footer class="py-10 mt-8 bg-black dark:bg-gray-950 text-gray-600 dark:text-gray-500 text-center text-sm border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4">&copy; <span id="current-year"></span> Robin Cerisier</div>
 </footer>
-
 <script src="../js/main.js"></script>
 </body>
-
 </html>
